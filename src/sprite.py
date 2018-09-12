@@ -13,10 +13,13 @@ class Sprite:
     def coords(self):
         return self.coordinates
 class DoorSprite(Sprite):
-    def __init__(self,game,photo_image,x,y,width,height):
+    def __init__(self,game,photo_image1,photo_image2,x,y,width,height):
         Sprite.__init__(self,game)
-        self.photo_image = photo_image
-        self.image = game.canvas.create_image(x,y,image = self.photo_image,anchor='nw')
+        self.x = x
+        self.y = y
+        self.photo_image1 = photo_image1
+        self.photo_image2 = photo_image2
+        self.image = game.canvas.create_image(x,y,image = self.photo_image1,anchor='nw')
         self.coordinates = Coords(x,y,x+(width/2),y+height)
         self.endgame = True
 class PlatformSprite(Sprite):
@@ -132,7 +135,8 @@ class StickSprite(Sprite):
                 self.x=0
                 left = False
                 if sprite.endgame:
-                    self.game.runing = False
+                    self.game.running = False
+                    sprite.game.canvas.itemconfig(sprite.image,image=sprite.photo_image2)
             if right and self.x >0 and collided_right(co,sprite_co):
                 self.x=0
                 right = False
