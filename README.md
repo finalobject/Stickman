@@ -1,8 +1,6 @@
-原文在<a href=" http://finalobject.cn/lucario/stickman">finalObject</a>
+原文在<a href="http://finalobject.cn/lucario/stickman">finalObject</a>
 
 这个也是和<a href="http://finalobject.cn/lucario/hoddle">弹球游戏</a>一样的环境，python3+tkinter，所以环境配置可以参考前一篇。火柴人比前一篇就是多了个一个动画效果，已经更加麻烦的体积碰撞，还有上升下落的物理模拟，还有一个就是游戏成功的检测。<!--more-->
-
-github连接在这：<a href="https://github.com/finalObject/stickman">https://github.com/finalObject/stickman</a>
 
 <img class="size-medium wp-image-213 aligncenter" src="http://finalobject.cn/wp-content/uploads/2018/09/stickman-2-300x300.jpg" alt="" width="300" height="300" />
 <h1>动画效果</h1>
