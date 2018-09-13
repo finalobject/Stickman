@@ -184,5 +184,5 @@ class StickSprite(Sprite):
         if falling and bottom and self.y ==0 \
            and co.y2 < self.game.canvas_height:
             self.y=4
-        # 根据速度移动位置
+        # 根据速度移动位置，移动
         self.game.canvas.move(self.image,self.x,self.y)
